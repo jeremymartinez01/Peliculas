@@ -1,0 +1,24 @@
+<section class="page-section bg-primary" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">Más de 1000 peliculas en 1 solo lugar!</h2>
+                <hr class="divider divider-light" />
+                <p class="text-white-75 mb-4">Te ofrecemos una variedad de peliculas con sus respectivos actores,directores,duracion etc...!</p>
+                
+                <a id="DBbutton" class="btn btn-light btn-xl" href="#services">Ver todas las peliculas!</a>
+                <script src="./about.component.js"></script>
+                <!-- Tabla con datos -->
+                <table>
+                    <tbody>
+                        <tr *ngFor="let datum of data">
+                            <th> {{  datum[ "Series_Title" ]  }}  </th>
+                            <td> {{  datum[ "Genre" ]  }}  </td>
+                            <td> {{  datum[ "Overview" ]  }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
