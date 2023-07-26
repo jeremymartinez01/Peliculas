@@ -41,6 +41,6 @@
         - name: Deploy
           uses: crazy-max/ghaction-github-pages@v3.1.0
           with:
-            build_dir: dist/<NOMBRE_APLICACION>
+            build_dir: dist/peliculas
           env:
             GITHUB_TOKEN:  ${{secrets.GITHUB_TOKEN}} 
