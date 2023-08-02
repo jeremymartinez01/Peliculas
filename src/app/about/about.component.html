@@ -1,4 +1,5 @@
 <section class="page-section bg-primary" id="about">
+    <!-- 
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 text-center">
@@ -8,7 +9,7 @@
                 
                 <a id="DBbutton" class="btn btn-light btn-xl" href="#services">Ver todas las peliculas!</a>
                 <script src="./about.component.js"></script>
-                <!-- Tabla con datos -->
+                Tabla con datos 
                 <table>
                     <tbody>
                         <tr *ngFor="let datum of data">
@@ -20,5 +21,16 @@
                 </table>
             </div>
         </div>
+    </div>
+    -->
+    <div class="grid-container">
+        <div class="card" *ngFor="let datum of data">
+            <img [src]="datum.Poster_Link" [alt]="datum.Series_Title" width="120" height="1500" >
+            <div class="titulo">{{ datum["Series_Title"]}}</div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="button" (click)="mostrarMenosPeliculas()">Atrás</button>
+        <button class="button" (click)="mostrarMasPeliculas()">Siguiente</button>
     </div>
 </section>

@@ -1,0 +1,42 @@
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente el contenido */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    min-height: 100vh;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    grid-row-gap:100px;
+    justify-items: center;
+    margin-bottom: 100px;
+}
+.card{
+    width: 70%; /* Asegurar que cada tarjeta ocupe todo el ancho de su celda */
+    height: 300px; /* Altura fija para las tarjetas, ajusta este valor según tus necesidades */
+    border: 1px solid #ccc; /* Borde opcional para las tarjetas */
+    border-radius: 5px; /* Bordes redondeados para las tarjetas */
+    /*overflow: hidden; /* Ocultar partes de la imagen que se salgan del contenedor */ 
+}
+.card img { 
+    width: 100%; /* Ajustar la imagen al 100% del ancho de la tarjeta */
+    height: 100%;  /*Ajustar la imagen al 100% de la altura de la tarjeta */
+    object-fit: cover;/* Asegurar que la imagen cubra toda la tarjeta sin deformarse */
+}
+.titulo {
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+    text-align: center; /* Centrar el texto horizontalmente */
+    font-size: 16px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Negrita para el título */
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+.button{
+    margin: 40px; /* Espacio entre los botones */
+}
