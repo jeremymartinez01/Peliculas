@@ -13,6 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "@canvasjs/angular-stockcharts"],
             "outputPath": "dist/peliculas",
             "index": "src/index.html",
             "main": "src/main.ts",
