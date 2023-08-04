@@ -36,7 +36,7 @@ export class PortfolioComponent {
         },
       ],
     });
-
+    
     chart.render();
   }
 }
