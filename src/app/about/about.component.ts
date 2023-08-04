@@ -5,21 +5,7 @@ import { Moviedata } from '../interfaces/moviedata';
  //Importación del servicio
 import { DataproviderService } from '../providers/dataprovider.service';
 // Obtenemos el botón desde el DOM
-const myButton = document.getElementById("DBbutton");
 
-// Verificamos que el botón exista antes de continuar
-if (myButton) {
-    // Agregamos el evento click al botón
-    myButton.addEventListener("click", handleClick);
-
-    // Definimos la función para manejar el evento click
-    function handleClick() {
-        console.log("¡Has hecho clic en el botón!");
-        // Aquí puedes agregar cualquier otra lógica que desees ejecutar cuando se haga clic en el botón.
-    }
-} else {
-    console.error("El botón con el id 'myButton' no fue encontrado en el DOM.");
-}
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
