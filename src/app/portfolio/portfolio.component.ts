@@ -17,6 +17,7 @@ export class PortfolioComponent {
     this.dataProvider.getResponse().subscribe((response)=>{
       this.data=(response as Moviedata[]);
       this.crearGrafica1();
+      this.crearGrafica2();
     });
   }
   crearGrafica1(){
@@ -39,4 +40,38 @@ export class PortfolioComponent {
     
     chart.render();
   }
+
+  crearGrafica2(){
+    if(!this.data) return;
+    const dataPoints =this.data.slice(0,10).map((movie) => ({
+      label: movie.Series_Title,
+      y: parseInt(movie.IMDB_Rating, 10),
+    }));
+    const chart = new CanvasJS.Chart('chart_Container', {
+      animationEnabled: true,
+      title: {
+        text: 'Rating de Peliculas',
+      },
+      data: [
+        {
+          type: 'bar',
+          dataPoints: dataPoints,
+        },
+      ],
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Chart.js Floating Bar Chart'
+          }
+        }
+      }
+    });
+  
+    chart.render();
+  }  
 }
